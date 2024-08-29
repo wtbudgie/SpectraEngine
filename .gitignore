@@ -1,0 +1,9 @@
+# Directories
+.vs/
+*.user/
+
+# Removes all x64 build directories (release/dist) - Most likely always going to be x64.
+**-x64/
+
+# Files
+*.user
