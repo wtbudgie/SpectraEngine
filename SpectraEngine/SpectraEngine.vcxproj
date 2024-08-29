@@ -11,13 +11,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Spectra\Core\Logging\Log.h" />
     <ClInclude Include="src\SpectraEngine.h" />
     <ClInclude Include="src\Spectra\Application.h" />
     <ClInclude Include="src\Spectra\Core.h" />
+    <ClInclude Include="src\Spectra\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Spectra\Core\Logging\Log.cpp" />
     <ClCompile Include="src\Spectra\Application.cpp" />
-    <ClCompile Include="src\Spectra\EntryPoint.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -66,7 +68,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SA_PLATFORM_WINDOWS;SA_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)SpectraEngine\include;src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -81,7 +84,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SA_PLATFORM_WINDOWS;SA_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)SpectraEngine\include;src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
