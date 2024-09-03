@@ -3,7 +3,11 @@
 *.user/
 
 # Removes all x64 build directories (release/dist) - Most likely always going to be x64.
-**-x64/
+**x86_64/
+*x86/
 
 # Files
 *.user
+!*.sln
+!*.csproj
+!*.vcxproj
