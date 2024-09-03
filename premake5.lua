@@ -13,6 +13,9 @@ project "SpectraEngine"
     targetdir ("".. outputdir .. "/%{prj.name}")
     objdir ("" .. outputdir .. "/obj/%{prj.name}")
 
+    pchheader "pch.h"
+    pchsource "SpectraEngine/src/pch.cpp"
+
     files {
         "%{prj.name}/src/**.h",
         "%{prj.name}/src/**.cpp"

@@ -10,3 +10,5 @@
 #else
 #error SpectraEngine is only supported on the Windows OS.
 #endif
+
+#define BIT(x) (1 << x)

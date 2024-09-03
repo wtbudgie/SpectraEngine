@@ -1,7 +1,9 @@
 #pragma once
 
 #include "Spectra/Core.h"
+
 #include <spdlog/spdlog.h>
+#include <spdlog/fmt/ostr.h>
 
 namespace Spectra {
 	class SPECTRA_API Log {
