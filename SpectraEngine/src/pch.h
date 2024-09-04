@@ -12,6 +12,9 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#ifdef SA_PLATFORM_WINDOWS
+#include "Spectra/Core/Logging/Log.h"
+#include "Spectra/Core/Window/RendererPlatforms.h"
+
+#ifdef HZ_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif

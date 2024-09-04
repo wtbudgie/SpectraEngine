@@ -26,6 +26,12 @@ project "SpectraEngine"
         "%{prj.name}/include"
     }
 
+    links {
+         "d3d11",
+         "d3d12",
+	    "dxgi.lib"
+    }
+
     filter "system:windows"
         cppdialect "C++20"
         staticruntime "On"

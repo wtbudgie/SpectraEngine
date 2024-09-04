@@ -6,18 +6,20 @@
 #include "Spectra/Core/Logging/Log.h"
 
 namespace Spectra {
-	Application::Application() {
+	Application::Application() : mRunning(true) {
+		mWindow = std::unique_ptr<Window>(Window::Create());
 
+		if (!mWindow) {
+			SA_CORE_ERROR("Failed to create window!");
+			mRunning = false;
+		}
 	}
 
-	Application::~Application() {
-
-	}
+	Application::~Application() {}
 
 	void Application::Run() {
-		WindowResizeEvent e(1280, 720);
-		SA_TRACE(e.ToString());
-
-		while (true);
+		while (mRunning) {
+			mWindow->OnUpdate();
+		};
 	}
 }
